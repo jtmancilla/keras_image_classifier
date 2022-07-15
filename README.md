@@ -5,14 +5,14 @@ I provide a Jupyter notebook with the code work.
 
 Tools used in this project:
 
-PyTorch
-ArgParse
-Jason
-PIL
-NumPy
-Pandas
-matplotlib
-scikit-learn 
+- PyTorch
+- ArgParse
+- Jason
+- PIL
+- NumPy
+- Pandas
+- matplotlib
+- scikit-learn 
 
 
 Command Line Application

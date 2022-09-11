@@ -4,6 +4,8 @@ import numpy as np
 import json
 from PIL import Image
 import argparse
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 
 
 image_size = 224

@@ -1,11 +1,13 @@
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
+import glob
 import tensorflow as tf
 import tensorflow_hub as hub
 import numpy as np
 import json
 from PIL import Image
 import argparse
-import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
+import matplotlib.pyplot as plt
 
 
 image_size = 224
@@ -44,6 +46,19 @@ def predict(image_path, model, top_k):
         index = lable + 1
         classes.append(class_names[str(index)].title())
         # probs.append(prob_list[index])
+      
+    # fig, (ax1, ax2) = plt.subplots(figsize=(10,10), ncols=2)
+    # ax1.imshow(image)
+    # ax1.axis('off')
+    # ax1.set_title('Test Image: {}'.format(img))
+    # ax2.barh(np.arange(5), prob_list)
+    # ax2.set_aspect(0.1)
+    # ax2.set_yticks(np.arange(5))
+    # ax2.set_yticklabels(classes_list, size='small')
+    # ax2.set_title('Class Probability:')
+    # ax2.set_xlim(0, 1.1)
+    # plt.tight_layout()
+    # plt.show()
   
     return probs, classes
 
